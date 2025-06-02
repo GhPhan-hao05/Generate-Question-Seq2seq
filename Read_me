@@ -1,0 +1,11 @@
+Phan A Hảo 2200005484
+I. Model sẽ có 3 phần
+   1. Chuẩn bị data để train nằm ở NỮA SAU của file Run_Preprocess.ipynb
+   2. Fine tuning T5 để tạo style và answer kết hợp với sampling ở (1) để tạo input cho giai đoạn dự đoán
+   3. Phần Model nằm ở file Seq2seq - Copy.ipynb
+   
+II. Lưu ý Vì dữ liệu lớn nên thời gian sampling khá lâu nên hầu hết các dữ liệu như ids, embedding GloVE đều được lưu vào file pickle
+    Do giói hạn phần cứng nên thời gian train quá lâu cũng như los không update nên model chưa cho ra được kết quả. Bù lại fine turning T5 lại cho ra được candidate answer của 1 câu text
+    
+III. Để train cũng như dự đoán với dữ liệu có sẵn chạy file Seq2seq - Copy.ipynb
+     Để xem đầu ra của T5 và cách sampling data Xem file Run_Preprocess.ipynb và sample_squad_data.py
